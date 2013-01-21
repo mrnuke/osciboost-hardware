@@ -1,0 +1,17 @@
+Osciboost - Oscilloscope Booster Pack
+
+Osciboost is a booster pack designed to turn your Stellaris(TM) microcontroller
+into a two-channel oscilloscope.
+
+Osciboost is a preliminary design. The code needed to compliment the hardware
+design has not yet been written.
+
+HACKING:
+
+You will need Kicad EDA to open and edit the hardware design:
+https://launchpad.net/kicad
+
+You will also need Øyvind Aabling's footprint library. You may get it here:
+https://code.launchpad.net/~oyvind-aabling/kicad-newlib/mod
+
+ 
