@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Mon 21 Jan 2013 01:50:25 PM CST
+EESchema Schematic File Version 2  date Mon 21 Jan 2013 09:27:00 PM CST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -35,15 +35,21 @@ EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
-Title "noname.sch"
-Date "21 jan 2013"
-Rev ""
-Comp ""
+Title "osciboost.sch"
+Date "22 jan 2013"
+Rev "NA"
+Comp "G-Tech Hardware Solutions"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 5600 1600
+Wire Wire Line
+	5300 1600 6200 1600
+Wire Wire Line
+	6200 1600 6200 1500
+Connection ~ 5300 1100
 Wire Wire Line
 	9000 1400 8800 1400
 Wire Wire Line
@@ -171,13 +177,8 @@ Wire Wire Line
 Wire Notes Line
 	4750 2900 4750 500 
 Wire Wire Line
-	6200 1500 5600 1500
-Connection ~ 5600 1500
-Wire Wire Line
 	6500 1100 5800 1100
 Connection ~ 6200 1100
-Wire Wire Line
-	5300 1100 5400 1100
 Wire Wire Line
 	6200 3750 6400 3750
 Wire Wire Line
@@ -287,6 +288,19 @@ Wire Notes Line
 	6950 7800 6950 450 
 Wire Wire Line
 	9000 1300 8800 1300
+Wire Wire Line
+	5200 1000 5200 1100
+Wire Wire Line
+	5200 1100 5400 1100
+$Comp
+L R R?
+U 1 1 50FE06D2
+P 5300 1350
+F 0 "R?" V 5200 1350 50  0000 C CNN
+F 1 "10k" V 5300 1350 50  0000 C CNN
+	1    5300 1350
+	1    0    0    -1  
+$EndComp
 Text Label 9000 1400 2    60   ~ 0
 AIN2
 Text Notes 700  7600 0    100  ~ 0
@@ -862,10 +876,10 @@ GPIO5
 $Comp
 L +5V #PWR024
 U 1 1 50FAE458
-P 5300 1100
-F 0 "#PWR024" H 5300 1190 20  0001 C CNN
-F 1 "+5V" H 5300 1190 30  0000 C CNN
-	1    5300 1100
+P 5200 1000
+F 0 "#PWR024" H 5200 1090 20  0001 C CNN
+F 1 "+5V" H 5200 1090 30  0000 C CNN
+	1    5200 1000
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -920,7 +934,7 @@ L MOSFET_P Q1
 U 1 1 50FAD9CD
 P 5600 1200
 F 0 "Q1" H 5600 1390 60  0000 R CNN
-F 1 "DMG1013T" H 5600 1020 60  0000 R CNN
+F 1 "DMG1013T" V 5800 1450 60  0000 R CNN
 	1    5600 1200
 	0    1    -1   0   
 $EndComp
