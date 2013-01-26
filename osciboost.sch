@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Mon 21 Jan 2013 09:27:00 PM CST
+EESchema Schematic File Version 2  date Sat 26 Jan 2013 03:39:28 PM CST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title "osciboost.sch"
-Date "22 jan 2013"
+Date "26 jan 2013"
 Rev "NA"
 Comp "G-Tech Hardware Solutions"
 Comment1 ""
@@ -44,6 +44,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	9300 3700 9000 3700
+Wire Wire Line
+	7300 3300 7600 3300
 Connection ~ 5600 1600
 Wire Wire Line
 	5300 1600 6200 1600
@@ -88,21 +92,11 @@ Wire Notes Line
 Connection ~ 3700 1500
 Connection ~ 9000 3700
 Connection ~ 9300 3700
-Wire Wire Line
-	9600 3700 8700 3700
 Connection ~ 9300 3300
-Wire Wire Line
-	8700 3300 9600 3300
-Connection ~ 7900 3700
-Wire Wire Line
-	7300 3700 8200 3700
-Connection ~ 7900 3300
-Wire Wire Line
-	7300 3300 8200 3300
 Wire Wire Line
 	9000 3200 9000 3300
 Wire Wire Line
-	7600 3200 7600 3300
+	7600 3300 7600 3200
 Wire Wire Line
 	7600 3800 7600 3700
 Wire Wire Line
@@ -292,11 +286,15 @@ Wire Wire Line
 	5200 1000 5200 1100
 Wire Wire Line
 	5200 1100 5400 1100
+Wire Wire Line
+	7600 3700 7300 3700
+Wire Wire Line
+	9000 3300 9300 3300
 $Comp
-L R R?
+L R R18
 U 1 1 50FE06D2
 P 5300 1350
-F 0 "R?" V 5200 1350 50  0000 C CNN
+F 0 "R18" V 5200 1350 50  0000 C CNN
 F 1 "10k" V 5300 1350 50  0000 C CNN
 	1    5300 1350
 	1    0    0    -1  
@@ -362,20 +360,20 @@ F 1 "22p" H 1850 6400 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LMV821AICT U5
-U 1 1 50FD9AB6
+L TL072 U4
+U 2 1 50FD9AB6
 P 3100 6300
-F 0 "U5" H 3050 6500 60  0000 L CNN
-F 1 "LMV821AICT" H 3050 6050 60  0000 L CNN
-	1    3100 6300
+F 0 "U4" H 3050 6500 60  0000 L CNN
+F 1 "OPA1662" H 3050 6050 60  0000 L CNN
+	2    3100 6300
 	1    0    0    -1  
 $EndComp
 $Comp
-L LMV821AICT U6
+L TL072 U4
 U 1 1 50FD9AB5
 P 5000 6200
-F 0 "U6" H 4950 6400 60  0000 L CNN
-F 1 "LMV821AICT" H 4950 5950 60  0000 L CNN
+F 0 "U4" H 4950 6400 60  0000 L CNN
+F 1 "OPA1662" H 4950 5950 60  0000 L CNN
 	1    5000 6200
 	1    0    0    -1  
 $EndComp
@@ -718,15 +716,6 @@ F 1 "AGND" H 7600 3730 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C15
-U 1 1 50FB729E
-P 9600 3500
-F 0 "C15" H 9650 3600 50  0000 L CNN
-F 1 "4.7u" H 9650 3400 50  0000 L CNN
-	1    9600 3500
-	1    0    0    -1  
-$EndComp
-$Comp
 L C C14
 U 1 1 50FB729B
 P 9300 3500
@@ -736,39 +725,12 @@ F 1 "4.7u" H 9350 3400 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C6
-U 1 1 50FB7298
-P 8200 3500
-F 0 "C6" H 8250 3600 50  0000 L CNN
-F 1 "4.7u" H 8250 3400 50  0000 L CNN
-	1    8200 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C4
-U 1 1 50FB7296
-P 7900 3500
-F 0 "C4" H 7950 3600 50  0000 L CNN
-F 1 "4.7u" H 7950 3400 50  0000 L CNN
-	1    7900 3500
-	1    0    0    -1  
-$EndComp
-$Comp
 L C C12
 U 1 1 50FB7293
 P 9000 3500
 F 0 "C12" H 9050 3600 50  0000 L CNN
 F 1 "4.7u" H 9050 3400 50  0000 L CNN
 	1    9000 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C11
-U 1 1 50FB7290
-P 8700 3500
-F 0 "C11" H 8750 3600 50  0000 L CNN
-F 1 "4.7u" H 8750 3400 50  0000 L CNN
-	1    8700 3500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1076,21 +1038,21 @@ F 1 "10k" V 4050 3850 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LMV821AICT U4
+L TL072 U3
 U 1 1 50F5C4AB
 P 5000 3750
-F 0 "U4" H 4950 3950 60  0000 L CNN
-F 1 "LMV821AICT" H 4950 3500 60  0000 L CNN
+F 0 "U3" H 4950 3950 60  0000 L CNN
+F 1 "OPA1662" H 4950 3500 60  0000 L CNN
 	1    5000 3750
 	1    0    0    -1  
 $EndComp
 $Comp
-L LMV821AICT U3
-U 1 1 50F5C4A7
+L TL072 U3
+U 2 1 50F5C4A7
 P 3100 3850
 F 0 "U3" H 3050 4050 60  0000 L CNN
-F 1 "LMV821AICT" H 3050 3600 60  0000 L CNN
-	1    3100 3850
+F 1 "OPA1662" H 3050 3600 60  0000 L CNN
+	2    3100 3850
 	1    0    0    -1  
 $EndComp
 $Comp
