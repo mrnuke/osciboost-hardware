@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 26 Jan 2013 03:39:28 PM CST
+EESchema Schematic File Version 2  date Sat 26 Jan 2013 06:13:08 PM CST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title "osciboost.sch"
-Date "26 jan 2013"
+Date "27 jan 2013"
 Rev "NA"
 Comp "G-Tech Hardware Solutions"
 Comment1 ""
@@ -44,6 +44,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	9100 1300 9100 1400
+Wire Wire Line
+	8800 1300 9100 1300
 Wire Wire Line
 	9300 3700 9000 3700
 Wire Wire Line
@@ -56,10 +60,6 @@ Wire Wire Line
 Connection ~ 5300 1100
 Wire Wire Line
 	9000 1400 8800 1400
-Wire Wire Line
-	10700 1300 10700 1200
-Wire Wire Line
-	10700 1200 10100 1200
 Wire Notes Line
 	6950 5400 450  5400
 Connection ~ 900  1550
@@ -281,8 +281,6 @@ Wire Wire Line
 Wire Notes Line
 	6950 7800 6950 450 
 Wire Wire Line
-	9000 1300 8800 1300
-Wire Wire Line
 	5200 1000 5200 1100
 Wire Wire Line
 	5200 1100 5400 1100
@@ -290,6 +288,26 @@ Wire Wire Line
 	7600 3700 7300 3700
 Wire Wire Line
 	9000 3300 9300 3300
+Wire Wire Line
+	10800 1200 10100 1200
+$Comp
+L AGND #PWR?
+U 1 1 5104710D
+P 9100 1400
+F 0 "#PWR?" H 9100 1400 40  0001 C CNN
+F 1 "AGND" H 9100 1330 50  0000 C CNN
+	1    9100 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R19
+U 1 1 51046F2E
+P 10800 1450
+F 0 "R19" V 10880 1450 50  0000 C CNN
+F 1 "0R" V 10800 1450 50  0000 C CNN
+	1    10800 1450
+	-1   0    0    1   
+$EndComp
 $Comp
 L R R18
 U 1 1 50FE06D2
@@ -847,10 +865,10 @@ $EndComp
 $Comp
 L AGND #PWR025
 U 1 1 50FAE430
-P 10700 1300
-F 0 "#PWR025" H 10700 1300 40  0001 C CNN
-F 1 "AGND" H 10700 1230 50  0000 C CNN
-	1    10700 1300
+P 10800 1700
+F 0 "#PWR025" H 10800 1700 40  0001 C CNN
+F 1 "AGND" H 10800 1630 50  0000 C CNN
+	1    10800 1700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -918,7 +936,7 @@ GPIOINT1
 Text Label 10100 1300 0    60   ~ 0
 TIMER
 Text Label 10100 1200 0    60   ~ 0
-GND
+GND_BAD
 Text Label 10100 1500 0    60   ~ 0
 TEST
 Text Label 10100 1600 0    60   ~ 0
