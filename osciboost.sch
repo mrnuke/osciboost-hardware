@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 26 Jan 2013 06:13:08 PM CST
+EESchema Schematic File Version 2  date Sat 26 Jan 2013 08:14:05 PM CST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ encoding utf-8
 Sheet 1 1
 Title "osciboost.sch"
 Date "27 jan 2013"
-Rev "NA"
+Rev "0.1"
 Comp "G-Tech Hardware Solutions"
 Comment1 ""
 Comment2 ""
